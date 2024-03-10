@@ -13,21 +13,25 @@ class BankAccount
       @balance -= amount
       log_transaction("Withdrawal", amount)
     else
-      puts "Insufficient funds!"
+      puts "not enough funds!"
     end
+  end
+
+  def balance()
+    puts @balance
   end
 
   private
 
-  def log_transaction(action, amount)
-    puts "#{action} of #{amount} logged."
+  def log_transaction(type, amount)
+    puts "#{type} of #{amount} logged."
   end
 end
 
 account = BankAccount.new(100)
 
-account.deposit(50)
-account.withdraw(30)
-account.withdraw(100)
+account.deposit(10)
+account.withdraw(3)
+account.withdraw(2)
 
-puts "Current balance: $#{account.balance}"
+puts account.balance

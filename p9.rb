@@ -26,3 +26,4 @@ camera = Camera.new
 
 puts Camera.turn_on(camera)
 puts Camera.turn_off(camera)
+
